@@ -1,0 +1,85 @@
+{
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+
+  "editor.tabSize": 2,
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.renderIndentGuides": true,
+
+  "editor.rulers": [80, 120],
+
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.feedback.visible": false,
+  "git.enableSmartCommit": true,
+  "window.zoomLevel": 0,
+  "gitlens.gitExplorer.files.layout": "auto",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "gitlens.codeLens.scopes": ["document"],
+  "python.pythonPath": "/usr/bin/python3.6",
+  "window.menuBarVisibility": "toggle",
+  "explorer.confirmDelete": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitNotFoundWarning": true,
+    "suppressLineUncommittedWarning": true,
+    "suppressShowKeyBindingsNotice": true
+  },
+
+  "arduino.path": "/home/karantza/arduino-1.8.5/",
+  "arduino.logLevel": "info",
+  "arduino.additionalUrls": "",
+  "arduino.enableUSBDetection": true,
+  "gitlens.keymap": "chorded",
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "editor.minimap.enabled": false,
+  "gitlens.historyExplorer.enabled": true,
+  "files.autoSave": "off",
+  "explorer.confirmDragAndDrop": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "[javascriptreact]": {},
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.color": "#90a4ae",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.suggest.localityBonus": true,
+  "gitlens.views.repositories.files.layout": "auto",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "sort-imports.on-save": true,
+  "sort-imports.default-sort-style": "module-scoped",
+  "files.autoGuessEncoding": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/node_modules": true
+  },
+  "breadcrumbs.enabled": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.editor.tabSizing": "shrink",
+  "search.exclude": {
+    "**/__pycache__": true
+  },
+  "javascript.suggest.completeFunctionCalls": true,
+  "window.titleBarStyle": "native",
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "typescript.format.enable": false,
+  "workbench.sideBar.location": "left",
+  "workbench.colorTheme": "Nord",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.enable": false,
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": true,
+  "javascript.format.enable": false,
+  "extensions.ignoreRecommendations": true,
+  "terminal.integrated.rendererType": "dom"
+}

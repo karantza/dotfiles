@@ -1,0 +1,148 @@
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+#
+# This config file uses keycodes (bindsym) and was written for the QWERTY
+# layout.
+#
+# To get a config file with the same key positions, but for your current
+# layout, use the i3-config-wizard
+#
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:montserrat 10
+title_align center
+
+gaps inner 12
+# gaps outer 0
+# smart_gaps on
+default_border pixel 1
+default_floating_border normal
+#for_window [class="^.*"] border pixel 4
+for_window [class="Ulauncher"] border none
+
+mouse_warping none
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #88C0D0 #3B4252aa #ECEFF4 #ECEFF4   #88C0D0
+client.focused_inactive #5E81AC #2E3440aa #E5E9F0 #E5E9F0   #5E81AC
+client.unfocused        #5E81AC #2E3440aa #D8DEE9 #D8DEE9   #5E81AC
+
+client.urgent           #BF616A #BF616A #ECEFF4 #ECEFF4   #BF616A
+#client.placeholder      #000000 #383c4a #ffffff #5294e2   #404552
+
+client.background       #000000
+
+
+# use Mouse+Mod1 to drag floating windows to their wanted position
+floating_modifier Mod1
+
+# start stuff
+# bindsym Mod4+space exec ulauncher
+bindsym Mod4+t exec xfce4-terminal
+
+bindsym Mod4+l exec /home/karantza/betterlockscreen -l dim
+bindsym Print exec xfce4-screenshooter -w
+bindsym Mod4+Print exec xfce4-screenshooter -r
+bindsym Mod4+Shift+Print exec xfce4-screenshooter
+
+# kill focused window
+bindsym Mod1+F4 kill
+
+# change focus
+bindsym Mod4+Left focus left
+bindsym Mod4+Down focus down
+bindsym Mod4+Up focus up
+bindsym Mod4+Right focus right
+
+# move focused window
+bindsym Mod4+Shift+Left move left
+bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+Up move up
+bindsym Mod4+Shift+Right move right
+
+# split in horizontal orientation
+bindsym Mod4+h split h
+
+# split in vertical orientation
+bindsym Mod4+v split v
+
+# enter fullscreen mode for the focused container
+bindsym Mod4+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym Mod4+w layout tabbed
+bindsym Mod4+e layout toggle split
+
+# toggle tiling / floating
+bindsym Mod4+Return floating toggle
+
+# change focus between tiling / floating windows
+bindsym Mod4+Shift+Return focus mode_toggle
+
+# focus the parent container
+bindsym Mod4+a focus parent
+
+# move the currently focused window to the scratchpad
+bindsym Mod4+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym Mod4+minus scratchpad show
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+
+# switch to workspace
+bindsym Mod4+1 workspace $ws1
+bindsym Mod4+2 workspace $ws2
+bindsym Mod4+3 workspace $ws3
+bindsym Mod4+4 workspace $ws4
+bindsym Mod4+5 workspace $ws5
+bindsym Mod4+6 workspace $ws6
+bindsym Mod4+7 workspace $ws7
+bindsym Mod4+8 workspace $ws8
+bindsym Mod4+9 workspace $ws9
+bindsym Mod4+0 workspace $ws10
+
+# move focused container to workspace
+bindsym Mod4+Shift+1 move container to workspace $ws1
+bindsym Mod4+Shift+2 move container to workspace $ws2
+bindsym Mod4+Shift+3 move container to workspace $ws3
+bindsym Mod4+Shift+4 move container to workspace $ws4
+bindsym Mod4+Shift+5 move container to workspace $ws5
+bindsym Mod4+Shift+6 move container to workspace $ws6
+bindsym Mod4+Shift+7 move container to workspace $ws7
+bindsym Mod4+Shift+8 move container to workspace $ws8
+bindsym Mod4+Shift+9 move container to workspace $ws9
+bindsym Mod4+Shift+0 move container to workspace $ws10
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym Mod4+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym Mod4+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+
+exec --no-startup-id nitrogen --restore
+exec --no-startup-id compton
+exec --no-startup-id xfce4-panel 
+exec --no-startup-id blueman-applet
+exec --no-startup-id fluxgui
+exec --no-startup-id nm-applet
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id start-pulseaudio-x11
+exec --no-startup-id solaar
+exec --no-startup-id ulauncher --hide-window
+
