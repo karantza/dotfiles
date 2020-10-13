@@ -1,28 +1,23 @@
 {
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
-
   "editor.tabSize": 2,
-  "editor.fontSize": 13,
+  "editor.fontSize": 11,
   "editor.fontLigatures": true,
-  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.renderIndentGuides": true,
-
   "editor.rulers": [80, 120],
-
   "[python]": {
     "editor.insertSpaces": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.python"
   },
   "workbench.startupEditor": "none",
   "workbench.statusBar.feedback.visible": false,
   "git.enableSmartCommit": true,
-  "window.zoomLevel": 0,
   "gitlens.gitExplorer.files.layout": "auto",
   "git.autofetch": true,
   "git.confirmSync": false,
   "gitlens.codeLens.scopes": ["document"],
-  "python.pythonPath": "/usr/bin/python3.6",
   "window.menuBarVisibility": "toggle",
   "explorer.confirmDelete": false,
   "gitlens.advanced.messages": {
@@ -30,8 +25,6 @@
     "suppressLineUncommittedWarning": true,
     "suppressShowKeyBindingsNotice": true
   },
-
-  "arduino.path": "/home/karantza/arduino-1.8.5/",
   "arduino.logLevel": "info",
   "arduino.additionalUrls": "",
   "arduino.enableUSBDetection": true,
@@ -41,11 +34,10 @@
   "editor.minimap.enabled": false,
   "gitlens.historyExplorer.enabled": true,
   "files.autoSave": "off",
-  "explorer.confirmDragAndDrop": false,
   "diffEditor.ignoreTrimWhitespace": true,
   "[javascriptreact]": {},
   "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.folders.color": "#90a4ae",
+  // "material-icon-theme.folders.color": "#90a4ae",
   "material-icon-theme.hidesExplorerArrows": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vsicons.dontShowNewVersionMessage": true,
@@ -55,10 +47,13 @@
   "gitlens.views.lineHistory.enabled": true,
   "sort-imports.on-save": true,
   "sort-imports.default-sort-style": "module-scoped",
-  "files.autoGuessEncoding": true,
   "files.exclude": {
     "**/__pycache__": true,
-    "**/node_modules": true
+    "**/.pytest_cache": true,
+    "**/.vscode": true,
+    "**/*.pyc": true,
+    "**/node_modules": true,
+    "**/venv": true
   },
   "breadcrumbs.enabled": true,
   "workbench.editor.highlightModifiedTabs": true,
@@ -72,14 +67,65 @@
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "typescript.format.enable": false,
   "workbench.sideBar.location": "left",
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "Monokai Dimmed",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.enable": false,
   "typescript.validate.enable": false,
   "javascript.validate.enable": true,
   "javascript.format.enable": false,
   "extensions.ignoreRecommendations": true,
-  "terminal.integrated.rendererType": "dom"
+  "githubPullRequests.remotes": ["origin"],
+  "editor.find.addExtraSpaceOnTop": false,
+  "explorer.incrementalNaming": "smart",
+  "explorer.sortOrder": "type",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.editor.revealIfOpen": true,
+  "window.restoreWindows": "all",
+  "workbench.colorCustomizations": {
+    // "editor.background": "#0f1014",
+    // "terminal.background": "#0f1014"
+    // "editorGutter.background": "#21252e",
+    // "editor.lineHighlightBackground": "#2E3440",
+    // "editor.lineHighlightBorder": "#2E3440"
+  },
+  "workbench.list.horizontalScrolling": true,
+  "bracket-pair-colorizer-2.colors": [
+    "#BF616A",
+    "#D08770",
+    "#EBCB8B",
+    "#A3BE8C",
+    "#B48EAD"
+  ],
+  "bracket-pair-colorizer-2.unmatchedScopeColor": "#ff5454",
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "yarn",
+  "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
+  "problems.showCurrentInStatus": true,
+  "terminal.integrated.scrollback": 100000,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "explorer.confirmDragAndDrop": false,
+  "arduino.path": "/home/alex/bin/arduino-1.8.9/",
+  "arduino.additionalUrls": "http://arduino.esp8266.com/stable/package_esp8266com_index.json",
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.formatOnType": true,
+  "debug.console.fontSize": 11,
+  "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "colorize.languages": ["javascriptreact", "javascript", "css", "scss", "ini"],
+  "colorize.include": "*.conf",
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font'",
+  "terminal.integrated.fontSize": 11,
+  "terminal.integrated.rendererType": "dom",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vscode-coverage-highlighter.defaultState": "disable",
+  "window.zoomLevel": 0,
+  "editor.formatOnPaste": true,
+  "spellright.notificationClass": "warning",
+  "spellright.suggestionsInHints": false,
+  "editor.formatOnSave": true,
+  "spellright.language": [],
+  "spellright.documentTypes": ["markdown", "latex"],
+  "clang-format.style": "{ColumnLimit: 120}"
 }

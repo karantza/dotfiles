@@ -1,3 +1,4 @@
+
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -14,7 +15,7 @@
 font pango:montserrat 10
 title_align center
 
-gaps inner 12
+gaps inner 18
 # gaps outer 0
 # smart_gaps on
 default_border pixel 1
@@ -22,27 +23,27 @@ default_floating_border normal
 #for_window [class="^.*"] border pixel 4
 for_window [class="Ulauncher"] border none
 
+for_window [title="Notes - .*"] floating enable
+
 mouse_warping none
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #88C0D0 #3B4252aa #ECEFF4 #ECEFF4   #88C0D0
-client.focused_inactive #5E81AC #2E3440aa #E5E9F0 #E5E9F0   #5E81AC
-client.unfocused        #5E81AC #2E3440aa #D8DEE9 #D8DEE9   #5E81AC
+client.focused          #666666 #1e1e1e #c5c8c6 #c5c8c6   #666666
+client.focused_inactive #1e1e1e #1e1e1e #c5c8c6 #c5c8c6   #1e1e1e
+client.unfocused        #1e1e1e #1e1e1e #c5c8c6 #c5c8c6   #1e1e1e
 
-client.urgent           #BF616A #BF616A #ECEFF4 #ECEFF4   #BF616A
-#client.placeholder      #000000 #383c4a #ffffff #5294e2   #404552
+client.urgent           #c4265e #c4265e #c5c8c6 #c5c8c6   #c4265e
 
-client.background       #000000
+client.background       #1e1e1e
 
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
 
 # start stuff
-# bindsym Mod4+space exec ulauncher
-bindsym Mod4+t exec xfce4-terminal
+bindsym Mod4+Return exec kitty
 
-bindsym Mod4+l exec /home/karantza/betterlockscreen -l dim
+bindsym Mod4+l exec light-locker-command -l
 bindsym Print exec xfce4-screenshooter -w
 bindsym Mod4+Print exec xfce4-screenshooter -r
 bindsym Mod4+Shift+Print exec xfce4-screenshooter
@@ -76,7 +77,7 @@ bindsym Mod4+w layout tabbed
 bindsym Mod4+e layout toggle split
 
 # toggle tiling / floating
-bindsym Mod4+Return floating toggle
+bindsym Mod4+t floating toggle
 
 # change focus between tiling / floating windows
 bindsym Mod4+Shift+Return focus mode_toggle
@@ -137,12 +138,16 @@ bindsym Mod4+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
-exec --no-startup-id xfce4-panel 
-exec --no-startup-id blueman-applet
-exec --no-startup-id fluxgui
+exec --no-startup-id light-locker
+exec --no-startup-id ~/.config/polybar/launch.sh
+#exec --no-startup-id blueman-applet
+#exec --no-startup-id fluxgui
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id solaar
+#exec --no-startup-id solaar
 exec --no-startup-id ulauncher --hide-window
+#exec --no-startup-id xautolock -time 15 -locker "betterlockscreen -l dim"
+exec --no-startup-id gnome-encfs-manager
+#exec --no-startup-id blueman-manager
 
